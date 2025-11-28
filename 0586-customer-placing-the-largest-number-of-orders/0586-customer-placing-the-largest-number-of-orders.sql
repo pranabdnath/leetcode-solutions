@@ -9,7 +9,7 @@ FROM (
 WHERE rn = 1;
 */
 
-/*Using Subquery
+/*Using Subquery*/
 
 SELECT customer_number
 FROM Orders
@@ -22,11 +22,12 @@ HAVING COUNT(*) = (
         GROUP BY customer_number
     ) x
 );
-*/
 
-/*EasyMethod*/
+
+/*EasyMethod
 SELECT customer_number
 FROM Orders
 GROUP BY customer_number
 ORDER BY COUNT(*) DESC
 LIMIT 1;
+*/
