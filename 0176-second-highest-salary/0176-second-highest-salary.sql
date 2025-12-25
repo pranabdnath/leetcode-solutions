@@ -6,7 +6,6 @@ Select (
 ) as SecondHighestSalary;
 
 
-
 # Write your MySQL query statement below
 
 # Easy Method - Distinct + Offset + Limit
