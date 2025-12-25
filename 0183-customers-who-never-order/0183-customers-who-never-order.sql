@@ -1,4 +1,3 @@
-
 # Write your MySQL query statement below
 SELECT C.name AS Customers
 FROM Customers C
