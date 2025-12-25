@@ -1,15 +1,24 @@
+Select (
+    select distinct salary
+    from employee
+    order by salary desc
+    limit 1 offset 1
+) as SecondHighestSalary;
+
+
+
 # Write your MySQL query statement below
 
-/* Easy Method - Distinct + Offset + Limit
-SELECT 
+# Easy Method - Distinct + Offset + Limit
+/*SELECT 
      (SELECT DISTINCT Salary
      FROM Employee
      ORDER BY Salary
      LIMIT 1 OFFSET 1)
      AS SecondHighestSalary
-
-### This method works with duplicates too but slightly lower than LIMIT func & cannot generate Nth Salary
 */
+/* 
+### This method works with duplicates too but slightly lower than LIMIT func & cannot generate Nth Salary
 SELECT MAX(Salary) AS SecondHighestSalary
 FROM Employee
 WHERE salary <(
